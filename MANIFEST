@@ -1,4 +1,6 @@
-Makefile.PL
-MANIFEST
-Reload.pm
-README
+./MANIFEST
+./Makefile.PL
+./README
+./LICENSE
+./lib/Apache/Reload.pm
+./RELEASE
