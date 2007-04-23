@@ -1,0 +1,18 @@
+=head1 NAME
+
+Changes - Apache::Reload change logfile
+
+=head1 CHANGES
+
+=over 1
+
+=item 0.08-dev
+
+Imported from v0.07 into ASF SVN
+[Philip M. Gollucci <pgollucci@p6m7g8.com>]
+
+Matt Sergeant <matt@sergeant.org> has donated Apache-Reload
+to the ASF.
+
+=back
+
