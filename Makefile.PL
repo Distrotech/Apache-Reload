@@ -3,5 +3,5 @@ use ExtUtils::MakeMaker;
 # the contents of the Makefile that is written.
 WriteMakefile(
     'NAME'	=> 'Apache::Reload',
-    'VERSION_FROM' => 'Reload.pm', # finds $VERSION
+    'VERSION_FROM' => 'lib/Apache/Reload.pm', # finds $VERSION
 );
