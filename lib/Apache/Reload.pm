@@ -113,7 +113,7 @@ sub handler {
         }
     }
     
-    
+    my @changed;
     while (my($key, $file) = each %Apache::Reload::INCS) {
         local $^W;
         warn "Apache::Reload: Checking mtime of $key\n" if $DEBUG;
@@ -133,22 +133,27 @@ sub handler {
         unless (defined $Stat{$file}) {
             $Stat{$file} = $^T;
         }
-        
+		# remove the modules
         if ($mtime > $Stat{$file}) {
             delete $INC{$key};
- #           warn "Reloading $key\n";
-            if (my $symref = $UndefFields{$key}) {
-#                warn "undeffing fields\n";
-                no strict 'refs';
-                undef %{$symref};
-            }
-            require $key;
-            warn("Apache::Reload: process $$ reloading $key\n")
-                    if $DEBUG;
-        }
+            push @changed, $key;
+	 	}
         $Stat{$file} = $mtime;
     }
-    
+
+	# reload the modules
+	foreach my $key (@changed) {
+        warn("Reloading $key\n") if $DEBUG;
+        if (my $symref = $UndefFields{$key}) {
+            warn("undeffing fields\n") if $DEBUG;
+            no strict 'refs';
+            undef %{$symref};
+        }
+        require $key;
+        warn("Apache::Reload: process $$ reloading $key\n")
+            if $DEBUG;
+    }
+
     return 1;
 }
 
