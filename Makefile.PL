@@ -17,21 +17,6 @@ else {
 
 %prereqs = ($mp_gen == 1 ? %mp1 : %mp2);
 
-unless ( $ARGV[0] eq '--dist' || $ENV{MOD_PERL_2_BUILD} ) {
-    if ( $Config{'osname'} eq 'linux' ) {
-        $prereqs{'Linux::Pid'} = 0;
-        if ( -e '/proc/self/smaps' ) {
-            $prereqs{'Linux::Smaps'} = 0;
-        }
-    }
-    elsif ( $Config{'osname'} =~ /(bsd|aix)/i ) {
-        $prereqs{'BSD::Resource'} = 0;
-    }
-    elsif ( $Config{'osname'} eq 'MSWin32' ) {
-        $prereqs{'Win32::API'} = 0;
-    }
-}
-
 my $HAS_APACHE_TEST = check_for_apache_test();
 
 my %common_opts = (
