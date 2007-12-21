@@ -6,7 +6,17 @@ Changes - Apache::Reload change logfile
 
 =over 1
 
-=item 0.08-dev
+=item 0.10-dev
+
+Apache::Reload and Apache2::Reload bundled for CPAN release
+This release incorporates unreleased changes in 0.08 and 0.09
+[Fred Moyer <fred@redhotpenguin.com>]
+
+=item 0.09
+
+Apache2::Reload was part of mod_perl2 core in this version
+
+=item 0.08
 
 Remove modified modules before reloading them
 [Javier Ureuen Val]

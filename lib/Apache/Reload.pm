@@ -17,7 +17,7 @@ package Apache::Reload;
 
 use strict;
 
-$Apache::Reload::VERSION = '0.08';
+$Apache::Reload::VERSION = '0.10';
 
 use vars qw(%INCS %Stat $TouchTime %UndefFields);
 
@@ -261,6 +261,10 @@ So don't do that.
 =head1 AUTHOR
 
 Matt Sergeant, matt@sergeant.org
+
+=head1 MAINTAINERS
+
+the mod_perl developers, dev@perl.apache.org
 
 =head1 SEE ALSO
 

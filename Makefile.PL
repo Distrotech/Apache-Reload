@@ -38,9 +38,9 @@ else {
     require ModPerl::MM;
     ModPerl::MM::WriteMakefile(
                                %common_opts,
-                               VERSION_FROM    => "lib/Apache/Reload.pm",
-                               NAME            => "Apache::Reload",
-                               ABSTRACT_FROM   => 'lib/Apache/Reload.pm',
+                               VERSION_FROM    => "lib/Apache2/Reload.pm",
+                               NAME            => "Apache2::Reload",
+                               ABSTRACT_FROM   => 'lib/Apache2/Reload.pm',
                               );
 }
 
