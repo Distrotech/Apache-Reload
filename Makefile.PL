@@ -5,6 +5,7 @@ use Config;
 my %prereqs = ();
 my %mp2 = ( mod_perl2 => 1.99022 );
 my %mp1 = ( mod_perl  => 0 );
+my $at_min_ver = 1.30;
 
 my $mp_gen;
 if ($ENV{MOD_PERL_2_BUILD}) {
@@ -51,6 +52,12 @@ if ($ENV{MOD_PERL_2_BUILD}) {
 sub check_for_apache_test {
     return unless eval {
         require Apache::Test;
+        if ($Apache::Test::VERSION < $at_min_ver) {
+            warn "Apache::Test version is " . $Apache::Test::VERSION . 
+                ", minimum version required is $at_min_ver" . 
+                ", tests will be skipped\n";
+            die;
+        }
         require Apache::TestMM;
         require Apache::TestRunPerl;
         1;
@@ -212,7 +219,14 @@ EOF
 
     return $self->Apache::TestMM::test(@_) if $HAS_APACHE_TEST;
 
-    return $self->SUPER::test(@_);
+    return <<EOF
+test::
+\t\@echo
+\t\@echo sorry, cannot run tests without a properly
+\t\@echo configured Apache-Test environment, mininum
+\t\@echo Apache::Test version needes is $at_min_ver
+\t\@echo
+EOF
 }
 
 sub clean {
