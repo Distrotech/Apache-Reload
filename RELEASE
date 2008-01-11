@@ -34,9 +34,10 @@ Instructions for Apache-Reload Release Manager
 
      MAINTAINER_BUILDING_RELEASE=1 perl Makefile.PL
 
-1. 'make dist' - to make sure nothing is missing from the manifest,
-   etc. Now test this generated package (not svn) with as many
-   configurations as possible on as many platforms as possible.
+1. 'make disttest' - to make sure nothing is missing from the manifest.
+   Now 'make dist', and test this generated package (not svn)
+   with as many configurations as possible on as many platforms
+   as possible.
 
   a. edit ./Changes:
      - find lib -type f -name "*.pm" | \
