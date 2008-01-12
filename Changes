@@ -6,7 +6,11 @@ Changes - Apache::Reload change logfile
 
 =over 1
 
-=item 0.10-dev
+=item 0.10-RC3
+
+Add make disttest procedure to RELEASE document - fred
+
+Check for Apache::Test version 1.30, needed to run tests - fred
 
 Apache::Reload and Apache2::Reload bundled for CPAN release
 This release incorporates unreleased changes in 0.08 and 0.09
