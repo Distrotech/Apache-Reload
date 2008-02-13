@@ -6,7 +6,7 @@ Changes - Apache::Reload change logfile
 
 =over 1
 
-=item 0.10-RC3
+=item 0.10-RC4
 
 Load mod_perl manually if PERL is defined, thanks to Steve Hay for the
 spot - fred
