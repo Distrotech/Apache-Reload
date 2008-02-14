@@ -1,9 +1,3 @@
-<IfDefine PERL>
-     LoadModule perl_module modules/mod_perl.so
-</IfDefine>
-<IfDefine PERL>
-     AddModule mod_perl.c
-</IfDefine>
 <IfModule mod_perl.c>
     <IfDefine APACHE2>
         PerlModule Apache2::Reload
