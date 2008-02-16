@@ -224,7 +224,7 @@ test::
 \t\@echo
 \t\@echo sorry, cannot run tests without a properly
 \t\@echo configured Apache-Test environment, mininum
-\t\@echo Apache::Test version needes is $at_min_ver
+\t\@echo Apache::Test version needed is $at_min_ver
 \t\@echo
 EOF
 }
