@@ -6,7 +6,7 @@ Changes - Apache::Reload change logfile
 
 =over 1
 
-=item 0.10-RC5
+=item 0.10 February 25, 2008
 
 Add make disttest procedure to RELEASE document - fred
 
