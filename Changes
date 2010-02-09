@@ -8,6 +8,10 @@ Changes - Apache::Reload change logfile
 
 =item 0.11-dev
 
+Add a no Apache::Reload directive which skips reloading for modules
+that have it included (useful for Moose compatibility).
+[Graham Barr, <gbarr@pobox.com>]
+
 Add Empty NOTICE file
 http://rt.cpan.org/Ticket/Display.html?id=34786
 [Niko Tyni (Debian Perl Group) <ntyni@debian.org>]
