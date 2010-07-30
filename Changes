@@ -8,6 +8,12 @@ Changes - Apache::Reload change logfile
 
 =item 0.11-dev
 
+Ignore require-hooks which exist in %INC
+[Ryan Gies <ryan@livesite.net>]
+
+Reloads by file, not module name
+[Ryan Gies <ryan@livesite.net>]
+
 Add a no Apache::Reload directive which skips reloading for modules
 that have it included (useful for Moose compatibility).
 [Graham Barr, <gbarr@pobox.com>]
