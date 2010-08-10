@@ -19,7 +19,7 @@ use strict;
 
 $Apache::Reload::VERSION = '0.11-dev';
 
-use vars qw(%INCS %Stat $TouchTime %UndefFields);
+use vars qw(%INCS %Stat $TouchTime %UndefFields %Ignore);
 
 %Stat = ($INC{"Apache/Reload.pm"} => time);
 
