@@ -6,7 +6,7 @@ Changes - Apache::Reload change logfile
 
 =over 1
 
-=item 0.11-dev
+=item 0.11 August 21, 2010
 
 Ignore require-hooks which exist in %INC
 [Ryan Gies <ryan@livesite.net>]

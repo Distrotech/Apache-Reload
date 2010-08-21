@@ -71,8 +71,8 @@ Instructions for Apache-Reload Release Manager
 3. when the package has been reported to be good, prepare a new
    package to be released
 
-  a. edit ./Changes:
-     - remove -rc\d+
+  a. edit ./Changes
+     - remove -rc\d+ (from lib/Apache/Reload.pm and lib/Apache2/Reload.pm also)
      - add release date
 
   b. rerun:
