@@ -20,7 +20,7 @@ use warnings FATAL => 'all';
 
 use mod_perl2;
 
-our $VERSION = '0.11';
+our $VERSION = '0.12';
 
 use Apache2::Const -compile => qw(OK);
 
