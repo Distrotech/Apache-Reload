@@ -11,6 +11,9 @@ Changes - Apache::Reload change logfile
 
 =item 0.11 August 21, 2010
 
+Add Apache-Test 1.34 dependency.
+[Phred]
+
 Ignore require-hooks which exist in %INC
 [Ryan Gies <ryan@livesite.net>]
 
