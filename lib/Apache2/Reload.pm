@@ -358,7 +358,7 @@ mode described before.
 
 =head2 Unregistering a module
 
-In some cases, it might be necessary to explicitely stop reloading
+In some cases, it might be necessary to explicitly stop reloading
 a module.
 
   Apache2::Reload->unregister_module('Some::Module');
