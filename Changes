@@ -8,13 +8,16 @@ Changes - Apache::Reload change logfile
 
 =item 0.12-dev
 
+Set the -apxs argument correctly when building from mod_perl.
+[Steve Hay]
+
 Doc spelling fix
 [Nicholas Bamber]
 
-=item 0.11 August 21, 2010
-
 Add Apache-Test 1.34 dependency.
 [Phred]
+
+=item 0.11 August 21, 2010
 
 Ignore require-hooks which exist in %INC
 [Ryan Gies <ryan@livesite.net>]
