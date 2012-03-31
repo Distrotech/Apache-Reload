@@ -6,7 +6,7 @@ Changes - Apache::Reload change logfile
 
 =over 1
 
-=item 0.12-dev
+=item 0.12 March 31, 2012
 
 Set the -apxs argument correctly when building from mod_perl.
 [Steve Hay]
