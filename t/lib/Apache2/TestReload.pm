@@ -15,7 +15,7 @@ our $pass = 0;
 sub handler {
     my $r = shift;
     $pass++;
-    if ($r->args eq 'last') {
+    if (defined $r->args and $r->args eq 'last') {
         Apache2::Reload->unregister_module($package);
         ModPerl::Util::unload_package($package);
         $pass = 0;
