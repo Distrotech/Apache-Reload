@@ -24,11 +24,9 @@ Instructions for Apache-Reload Release Manager
    as possible.
 
   a. edit ./Changes:
-     - find lib -type f -name "*.pm" | \
-         xargs perl -pi -e 's,0.13-dev,0.13-rc1,g'
-     - perl -pi -e 's,0.13-dev,0.13-rc1,g' Changes
+     - change -dev to -rc\d+ starting with -rc1
 
-     - don't commit these (see dev@ archives)
+     - don't commit this (see dev@ archives)
 
   b. nuke any preinstalled Apache-Reload libs and run 'make test'
 
