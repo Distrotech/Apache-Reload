@@ -24,6 +24,12 @@ my $HAS_APACHE_TEST = check_for_apache_test();
 
 my %common_opts = (
                    PREREQ_PM       => \%prereqs,
+                   dist            => {
+                       COMPRESS => 'gzip -9f', SUFFIX => 'gz',
+                       PREOP   => 'find $(DISTVNAME) -type d -print|xargs chmod 0755 && ' .
+                                  'find $(DISTVNAME) -type f -print|xargs chmod 0644',
+                       TO_UNIX => 'find $(DISTVNAME) -type f -print|xargs dos2unix'
+                   },
                    clean           => { FILES => 't/TEST' },
                   );
 
