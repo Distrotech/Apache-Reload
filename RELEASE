@@ -103,7 +103,7 @@ Instructions for Apache-Reload Release Manager
 
 6. Prepare for the next cycle
 
-  a. increment version in lib/Apache/Reload.pm
+  a. increment version in lib/Apache/Reload.pm and lib/Apache2/Reload.pm also
 
   b. edit ./Changes:
      - start a new item with incremented version + '-dev'
