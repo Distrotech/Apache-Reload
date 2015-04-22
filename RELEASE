@@ -25,8 +25,8 @@ Instructions for Apache-Reload Release Manager
 
     a. login into https://pause.perl.org
     b. menu click: Select Mailinglist/Action
-    c. choose APML and share_perms and click go
-    d. click 3.3 Make somebody else co-maintainer
+    c. choose APML and Change Permissions and click go
+    d. click 3.1 Make somebody else co-maintainer
     e. choose the modules to give the perms to
        type the username of the new co-maintainer
     f. if you happen to know that packages were added this release,
