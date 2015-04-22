@@ -3,22 +3,6 @@ Instructions for Apache-Reload Release Manager
 0.  Ask the PMC to verify that you have the appropriate CPAN permissions
     on dev@perl.
 
-    make sure your public key is in the KEYS file in the mod_perl docs.
-    you should only need to do this if this is your first time playing
-    Release Manager
-
-     $ cd mod_perl-docs
-     $ grep $USER src/dist/KEYS
-
-    note that the KEYS file itself contains all the instructions you
-    need on how to add your key.  if you need further help on gpg
-    (like how to create a key in the first place) you can look here
-
-      http://people.apache.org/~geoff/gpghowto.html
-
-    Copy the KEYS file into place:
-    % scp KEYS www.apache.org:/www/www.apache.org/dist/perl/KEYS
-
     If this is your first release, ask someone with APML karma on PAUSE
     to verify you have the appropriate permissions.  Likely someone on
     the PMC can do this.
