@@ -99,6 +99,8 @@ Instructions for Apache-Reload Release Manager
 
      $ perl -pi -e 's/(\d+)\.(\d+)/join(".", $1, $2+1)/eg' RELEASE
 
+     (undo the change to the PAUSE menu item number in item 0d. above)
+
   d. commit Changes
      % svn ci -m "start 0.13-dev cycle" Changes RELEASE \
        lib/Apache/Reload.pm lib/Apache2/Reload.pm
