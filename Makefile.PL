@@ -1,5 +1,6 @@
 use strict;
 
+use lib qw(lib);
 use Config;
 
 my %prereqs = ();
@@ -22,7 +23,11 @@ else {
 
 my $HAS_APACHE_TEST = check_for_apache_test();
 
+my $VERSION;
+set_version();
+
 my %common_opts = (
+                   VERSION         => $VERSION,
                    PREREQ_PM       => \%prereqs,
                    dist            => {
                        COMPRESS => 'gzip -9f', SUFFIX => 'gz',
@@ -43,7 +48,6 @@ if ($mp_gen == 1 || $ENV{MAINTAINER_BUILDING_RELEASE}) {
     require ExtUtils::MakeMaker;
     ExtUtils::MakeMaker::WriteMakefile(
                                        %common_opts,
-                                       VERSION_FROM    => "lib/Apache/Reload.pm",
                                        NAME            => "Apache::Reload",
                                        ABSTRACT_FROM   => 'lib/Apache/Reload.pm',
                                       );
@@ -53,7 +57,6 @@ else {
     require ModPerl::MM;
     ModPerl::MM::WriteMakefile(
                                %common_opts,
-                               VERSION_FROM    => "lib/Apache2/Reload.pm",
                                NAME            => "Apache2::Reload",
                                ABSTRACT_FROM   => 'lib/Apache2/Reload.pm',
                               );
@@ -79,6 +82,22 @@ sub check_for_apache_test {
     Apache::TestRunPerl->generate_script();
 
     return 1;
+}
+
+sub set_version {
+    require Apache::Reload;
+    $VERSION = $Apache::Reload::VERSION;
+
+    my $fh = Symbol::gensym();
+    open $fh, 'Changes' or die "Can't open Changes: $!";
+    while (<$fh>) {
+        if(/^=item.*-(dev|rc\d+)/) {
+            $VERSION .= "-$1";
+            last;
+        }
+        last if /^=item/;
+    }
+    close $fh;
 }
 
 # If a specific generation was passed as an argument,
