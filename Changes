@@ -6,7 +6,7 @@ Changes - Apache::Reload change logfile
 
 =over 1
 
-=item 0.13-dev
+=item 0.13-rc1
 
 Fix reload.t. Reported in CPAN RT#96656.
 [Steve Hay]
