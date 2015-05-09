@@ -52,7 +52,7 @@ Instructions for Apache-Reload Release Manager
    package to be released
 
   a. edit ./Changes
-     - remove -rc\d+ (from lib/Apache/Reload.pm and lib/Apache2/Reload.pm also)
+     - remove -rc\d+
      - add release date
 
   b. rerun:
